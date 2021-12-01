@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import User from './App';
+import App from './App';
+import 'modern-normalize/modern-normalize.css';
+import './index.css';
+import 'reset-css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <User />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

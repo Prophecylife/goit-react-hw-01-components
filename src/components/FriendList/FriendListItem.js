@@ -1,12 +1,23 @@
 import PropTypes from 'prop-types';
+import s from './FriendList.module.scss';
+import React from 'react';
 
 const Friend = ({ isOnline, avatar, name }) => {
   return (
-    <div>
-      <span class="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt={name + ' avatar'} width="48" />
-      <p class="name">{name}</p>
-    </div>
+    <React.Fragment>
+      <span
+        className={`${s.status} ${
+          isOnline ? s.status__online : s.status__offline
+        }`}
+      ></span>
+      <img
+        className={s.avatar}
+        src={avatar}
+        alt={name + ' avatar'}
+        width="48"
+      />
+      <p className={s.name}>{name}</p>
+    </React.Fragment>
   );
 };
 

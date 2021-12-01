@@ -1,0 +1,26 @@
+.transaction {
+  background-color: #ffffff;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  & thead {
+    font-weight: 800;
+    background-color: #00bcd5;
+
+    & th {
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 8px;
+    }
+  }
+}
+tbody tr:nth-child(odd) {
+  background: #ecf1f4;
+}
+tbody td {
+  vertical-align: center;
+  border: 1px solid #ddd;
+  padding: 5px;
+}

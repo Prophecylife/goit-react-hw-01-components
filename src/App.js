@@ -1,3 +1,5 @@
+import './App.scss';
+
 // Task 1 Profile
 import Profile from './components/Profile/Profile';
 import user from './data/user.json';
@@ -14,7 +16,7 @@ import friends from './data/friends.json';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './data/transactions.json';
 
-export default function User() {
+export default function App() {
   return (
     <div className="App">
       <Profile
@@ -28,7 +30,7 @@ export default function User() {
       />
       <Statistics title="Upload stats" stats={stats} />
       <FriendsList friends={friends} />
-      <TransactionHistory transactions={transactions} />;
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }
