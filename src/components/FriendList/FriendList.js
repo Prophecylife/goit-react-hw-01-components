@@ -5,14 +5,9 @@ import s from './FriendList.module.scss';
 export default function FriendsList({ friends }) {
   return (
     <ul>
-      {friends.map(friend => (
-        <li className={s.item} key={friend.id}>
-          <Friend
-            isOnline={friend.isOnline}
-            avatar={friend.avatar}
-            name={friend.name}
-            id={friend.id}
-          />
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <li className={s.item} key={id}>
+          <Friend isOnline={isOnline} avatar={avatar} name={name} id={id} />
         </li>
       ))}
     </ul>
